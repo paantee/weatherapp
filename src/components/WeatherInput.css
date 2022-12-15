@@ -1,0 +1,18 @@
+body {
+    background-image: url("https://img.freepik.com/free-vector/paper-style-3d-clouds-background-blue-sky_1017-38298.jpg?w=2000");
+    text-align: center;
+    font-weight: bolder;
+}
+
+.div1 {
+    margin-top: 90px;
+    padding: 10%;
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+    border: 1px black;
+    height: 400px;
+    width: 375px;
+}

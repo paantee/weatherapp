@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './WeatherInput.css';
 
 export default function WeatherInput() {
 
@@ -31,20 +32,22 @@ export default function WeatherInput() {
     useEffect(() => fetchData(), []);
 
     return (
-        <div>
-            <h1>Enter Location</h1>
-            <form onSubmit={handleSubmit}>
-                <input type='text' id='location' value={location} onChange={handleChange} />
-                <button type='submit'>Submit</button>
-            </form>
-            {weather && (
-        <div>
-          <h2>Current weather in {weather.name}:</h2>
-          <p>Temperature: {weather.main.temp}°C</p>
-          <p>Conditions: {weather.weather[0].description}</p>
-          <img src={imgSrc} alt={weather.weather[0].description}/>
-        </div>
-      )}
+        <div class="div1">
+            <span>
+                <h1>Enter Location</h1>
+                <form onSubmit={handleSubmit}>
+                    <input type='text' id='location' value={location} onChange={handleChange} />
+                    <button type='submit'>Submit</button>
+                </form>
+                {weather && (
+                    <div>
+                        <h2>Current weather in {weather.name}:</h2>
+                        <p>Temperature: {weather.main.temp}°C</p>
+                        <p>Conditions: {weather.weather[0].description}</p>
+                        <img src={imgSrc} alt={weather.weather[0].description} />
+                    </div>
+                )}
+            </span>
         </div>
     );
 }
